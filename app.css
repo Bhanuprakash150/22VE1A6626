@@ -1,0 +1,212 @@
+/* Header Styles */
+.app-header {
+  background-color: #2c3e50; /* Dark blue/grey */
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.header-nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px; /* Space between nav items */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links a.active { /* Add .active class for current page */
+  color: #89cff0; /* Lighter blue on hover/active */
+}
+
+/* Footer Styles */
+.app-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #eee;
+  color: #555;
+  border-top: 1px solid #ddd;
+}
+
+/* URL Shortener Form Styles */
+.url-shortener-form {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input[type="url"],
+.form-group input[type="number"],
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensures padding doesn't add to total width */
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-group input:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-group input:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+.url-shortener-form button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Shortened URL Display Card */
+.shortened-urls-list {
+  display: grid;
+  gap: 15px; /* Space between cards */
+  /* You can add grid-template-columns here if you want multiple columns */
+  /* For example: grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+}
+
+.shortened-url-card {
+  background-color: #e6f7ff; /* Light blue background */
+  border: 1px solid #b3e0ff; /* Slightly darker blue border */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Space between text lines */
+}
+
+.shortened-url-card p {
+  margin: 0; /* Remove default paragraph margin */
+  word-break: break-all; /* Break long URLs */
+}
+
+.shortened-url-card strong {
+  color: #0056b3; /* Darker blue for labels */
+}
+
+.shortened-url-card .copy-button {
+  align-self: flex-start; /* Align button to start */
+  margin-top: 10px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  background-color: #28a745; /* Green for copy button */
+}
+
+.shortened-url-card .copy-button:hover {
+  background-color: #218838;
+}
+
+/* Statistics Table Styles */
+.statistics-table-container {
+  overflow-x: auto; /* Enables horizontal scrolling for small screens */
+  margin-top: 25px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.statistics-table {
+  width: 100%;
+  border-collapse: collapse; /* Remove space between table cells */
+  min-width: 700px; /* Ensure table is readable on smaller screens by enforcing a min-width */
+}
+
+.statistics-table th,
+.statistics-table td {
+  border: 1px solid #e0e0e0;
+  padding: 12px 15px;
+  text-align: left;
+  vertical-align: top; /* Align content to the top */
+}
+
+.statistics-table th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.statistics-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.statistics-table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+.detailed-clicks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detailed-clicks-list li {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+.detailed-clicks-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.detailed-clicks-list p {
+  margin: 2px 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.detailed-clicks-list p strong {
+  color: #333;
+}
